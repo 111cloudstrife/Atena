@@ -69,6 +69,8 @@
 </div>
 </div>
 
+
+
 <div class="menu_line">
 <div class="colored">
 <div class="container">
@@ -89,94 +91,45 @@ $('.notifications').toggleClass('active');
 }
 </script>
 
-
 <section id="my_dv">
 <div class="container">
 <div class="row">
-<div class="col-sm-8 col-sm-offset-2 npd">
-	<h2>Создать заказ</h2>
-	<div class="row">
-		<div class="col-sm-6">
-			<h3>Выберите тип автомобиля</h3>
-			<select>
-				<option>Бюджетный вариант</option>
-				<option>Бюджетный вариант</option>
-				<option>Бюджетный вариант</option>
-			</select>
-		</div>
-		<div class="col-sm-6">
-			<h3>Выберите ваш бюджет</h3>
-			<select>
-				<option>По договоренности</option>
-				<option>По договоренности</option>
-				<option>По договоренности</option>
-			</select>
-		</div>
-	<div style="clear:both;"></div>
-<div class="col-xs-12">
-	<h3>Напишите в каком городе хотите арендовать транспорт</h3>
-		<select>
-			<option>Пхукет</option>
-			<option>Пхукет</option>
-			<option>Пхукет</option>
-		</select>
-	<h3>Впишите даты планируемой аренды?</h3>
-	<div class="col-sm-11 npd">
-	<div class='input-group date' id='datestart'>
-		<input type='text' class="form-control" />
-		<span class="input-group-addon">
-		</span>
+	<h2>Мои заказы</h2>
+	<h3>Здесь отображаются ваши заказы</h3>
+	<div class="dv">
+		<img src="img/car_min2.png" alt="" />
+		<h1>Аренда авто</h1>
+		<h2>С 23.11.17 - 05.12.17 <span>(62 дня)</span> <a href="javascript:void(0);">Удалить</a></h2>
+		<h3><img src="img/loc.png" alt=""> Пхукет</h3>
+		<div style="clear:both;"></div>
 	</div>
-	<div class='input-group date' id='dateend'>
-		<input type='text' class="form-control" />
-		<span class="input-group-addon">
-		</span>
+	<div class="dv">
+		<img src="img/car_min2.png" alt="" />
+		<h1>Аренда авто</h1>
+		<h2>С 23.11.17 - 05.12.17 <span>(62 дня)</span> <a href="javascript:void(0);">Удалить</a></h2>
+		<h3><img src="img/loc.png" alt=""> Пхукет</h3>
+		<div style="clear:both;"></div>
 	</div>
-	<style>
-		.date{float:left; width:50%; margin:0;}
-			.date input{width:95% !important;}
-			.input-group-addon{display:none;}
-	</style>
+	<div class="dv">
+		<img src="img/car_min2.png" alt="" />
+		<h1>Аренда авто</h1>
+		<h2>С 23.11.17 - 05.12.17 <span>(62 дня)</span> <a href="javascript:void(0);">Удалить</a></h2>
+		<h3><img src="img/loc.png" alt=""> Пхукет</h3>
+		<div style="clear:both;"></div>
 	</div>
-	<div class="col-sm-1 npd" id="date">
-	<input type="text" style="text-align:center; padding:0;">
-	</div>
-	
-	<h3>Куда доставить автомобиль?</h3>
-	<input type="text">
-	<button class="aqua">Начать поиск</button>
-	<button class="white">Отмена</button>
-</div>
-</div>
 </div>
 </div>
 </section>
 
-<script type="text/javascript">
-$(function () {
-	$('#datestart, #dateend').datepicker({
-		format: 'dd/mm/yyyy',
-		language: 'ru'
-	});
-});
-$('input').change(function(){
-	var datestart = parseInt($('#datestart input').val());
-	var dateend = parseInt($('#dateend input').val());
-	var dayslays = dateend - datestart;
-	if(!dayslays || dayslays<0){$('#date input').val('');}
-	else{
-	$('#date input').val(dayslays+' дней');
-	}
-});
-</script>
-
 <section id="footer">
 <div class="container">
 <div class="row" style="margin:0 -30px;">
-	<div class="col-md-4 col-sm-6">
-		<a href="javascript:void(0);">Политика конфиденциальности</a>
+	<div class="col-md-3 col-sm-5">
+		<a href="javascript:void(0);">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
 	</div>
-	
+	<div class="col-sm-1">
+		<a href="#">FAQ</a>
+	</div>
 	<div class="col-md-2 col-sm-3 col-sm-offset-3 col-md-offset-6 text-center dropup">
 		<h6 type="button" data-toggle="dropdown">ЯЗЫК: <span>РУССКИЙ</span><span class="caret" style="color:#d7d7d7;top: -3px; left: 5px;"></span></h6>
 		<ul class="dropdown-menu dropup">
@@ -187,7 +140,7 @@ $('input').change(function(){
 </div>
 <div class="row" style="margin:30px -30px;">
 	<div class="col-md-4">
-		<h5>© 2017 <span>Athena</span> - Все права защищены.</h5>
+		<h5>© 2017 <span>BebeBooking</span> - Все права защищены.</h5>
 	</div>
 	<div class="col-md-2 col-md-offset-6 text-center">
 		<div class="social">
