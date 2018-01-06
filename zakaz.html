@@ -99,21 +99,21 @@ $('.notifications').toggleClass('active');
 	<div class="dv">
 		<img src="img/car_min2.png" alt="" />
 		<h1>Аренда авто</h1>
-		<h2>С 23.11.17 - 05.12.17 <span>(62 дня)</span> <a href="javascript:void(0);">Удалить</a></h2>
+		<h2>С 23.11.17 - 05.12.17 <span>(62 дня)</span> <a href="javascript:modal_call('modal_delete');">Удалить</a></h2>
 		<h3><img src="img/loc.png" alt=""> Пхукет</h3>
 		<div style="clear:both;"></div>
 	</div>
 	<div class="dv">
 		<img src="img/car_min2.png" alt="" />
 		<h1>Аренда авто</h1>
-		<h2>С 23.11.17 - 05.12.17 <span>(62 дня)</span> <a href="javascript:void(0);">Удалить</a></h2>
+		<h2>С 23.11.17 - 05.12.17 <span>(62 дня)</span> <a href="javascript:modal_call('modal_delete_search');">Удалить</a></h2>
 		<h3><img src="img/loc.png" alt=""> Пхукет</h3>
 		<div style="clear:both;"></div>
 	</div>
 	<div class="dv">
 		<img src="img/car_min2.png" alt="" />
 		<h1>Аренда авто</h1>
-		<h2>С 23.11.17 - 05.12.17 <span>(62 дня)</span> <a href="javascript:void(0);">Удалить</a></h2>
+		<h2>С 23.11.17 - 05.12.17 <span>(62 дня)</span> <a href="javascript:modal_call('modal_msg');">Удалить</a></h2>
 		<h3><img src="img/loc.png" alt=""> Пхукет</h3>
 		<div style="clear:both;"></div>
 	</div>
@@ -153,5 +153,52 @@ $('.notifications').toggleClass('active');
 </div>
 </section>
 
+<div class="overlay"></div>
+<div class="modalx modal_delete">
+	<h4>Вы уверены, что хотите удалить заявку?</h4>
+	<button class="white"><a href="javascript:modal_drop();">Отмена</a></button>
+	<button class="blue"><a href="javascript:modal_drop();">Удалить</a></button>
+</div>
+
+<div class="modalx modal_delete_search">
+	<h4>Удалить свой запрос на поиски транспорта</h4>
+	<div class="modal_form">
+		<h5><b>Напишите пожалуйста, почему вы удаляете заказ?</b></h5>
+		<textarea placeholder="Я понял(а), что автомобиль мне не по карману..."></textarea>
+		<div style="clear:both;"></div>
+		<button><img src="img/attach.png" alt="" /></button>
+		<button><img src="img/emoji.png" alt="" /></button>
+	</div>
+	<button class="white"><a href="javascript:modal_drop();">Отмена</a></button>
+	<button class="blue"><a href="javascript:modal_drop();">Отправить</a></button>
+</div>
+
+<div class="modalx modal_msg">
+	<h4>Отправить сообщение клиенту</h4>
+	<div class="modal_form">
+		<h5><b>Напишите подробнее условие и про оплату</b></h5>
+		<textarea placeholder="Здравствуйте, есть машина на ваши дни. Доставка 200 ТНВ. С вас только депозит 5000 ТНВ и копия паспорта"></textarea>
+		<div style="clear:both;"></div>
+		<button><img src="img/attach.png" alt="" /></button>
+		<button><img src="img/emoji.png" alt="" /></button>
+		<h5><b>Стоимость за все время</b></h5>
+		<input type="text" placeholder="800 ТНВ например">
+	</div>
+	<button class="white"><a href="javascript:modal_drop();">Отмена</a></button>
+	<button class="blue"><a href="javascript:modal_drop();">Отправить</a></button>
+</div>
+
+<script>
+function modal_call(type){
+var height = $('.'+type).height();
+$('.'+type).attr('style', 'margin-top:-'+height/2+'px');
+$('.overlay, .'+type).addClass('active');
+}
+function modal_drop(){
+$('.modalx').attr('style', 'margin-top:-1000px');
+$('.overlay, .modalx').removeClass('active');
+}
+$('.overlay').click(function(){modal_drop();});
+</script>
 </body>
 </html>
