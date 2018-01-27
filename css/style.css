@@ -140,22 +140,41 @@ sub{position:absolute; top:0; left:100%; margin: -5px -10px; min-width:16px; hei
 	#top h5{font: 16px/34px 'Open Sans'; color:#7d7d7d; padding-bottom:15px;}
 
 #car{}
-	#car h1{font:bold 36px 'Open Sans'; color:#4f4f6f; padding:60px 0 0px;}
-	#car h3{font:300 22px 'Open Sans';}
-	#car h4{font:16px/24px 'Open Sans'; padding:25px 0 25px;}
-	#car h5{font:15px/25px 'Open Sans'; color:#7d7d7d; padding:10px 0 30px;}
+	#car h1{font:bold 36px 'Open Sans'; color:#4f4f6f; padding:55px 0 0px;}
+	#car h2{font:600 18px 'Open Sans'; color:#00aeef;padding: 25px 0 0;}
+	#car h3{font:300 23px 'Open Sans'; padding-bottom:15px;}
+		#car h3 span{font-size:12px;}
+	#car h4{font:16px/24px 'Open Sans'; padding:15px 0 25px;}
+	#car h5{font: 15px/30px 'Open Sans'; color: #7d7d7d; padding: 15px 0 30px;}
 		#car ul{padding:0;}
 	#car img{max-width:100%;}
+	.car_owner > img{float:left; padding:15px 20px 15px 5px;}
+	.car_owner h5{font:13px/25px 'Open Sans' !important; padding:10px 0 30px !important;}
+	.car_owner h5 img{padding-left: 5px; padding-right: 10px;}
+	.car_owner h4{font:14px/24px 'Open Sans' !important; padding: 15px 0 !important;}
+	.car_owner h6{font: 600 13px 'Open Sans'; padding: 10px 0;}
+	.car_owner input{width:100%; border-radius:20px; height:30px; border:1px solid #ebebeb;margin:0 0 10px;}
+	.car_owner button{margin:10px auto 0; width:100%; height:50px; border-radius:30px;}
 
-#comments{}
+#comments{padding-bottom: 60px;}
 	#comments h2{font:300 24px 'Open Sans';}
-	.comment{}
+	.comment{padding: 30px 0 0;}
 		.comment > img{width:75px; float:left;}
 		.comment > *:not(img){margin-left:140px;}
-		.comment h3{}
+		.comment h3{font: 600 17px 'Open Sans';}
 		.comment h4{font:15px/25px 'Open Sans'; color:#636363; padding:15px 0 20px;}
-		.comment h5{}
-			.comment h5 span a{text-align:right;}
+		.comment h5{font: 600 12px 'Open Sans';padding-bottom: 35px;}
+			.comment h5 span{text-align: right; display: inline-block; float: right;}
+			.comment h5 a{color: #66cef5;}
+			.comment .comment{margin-left:7% !important;}
+.write_msg{}
+	.write_msg h2{    padding: 30px 0;}
+	.write_msg input{width:44%; border:0; border-bottom:1px solid #ebebeb;font:18px/40px 'Open Sans';}
+		.write_msg input:focus{border-bottom:1px solid #4593d6;}
+	.write_msg textarea{ width:100%;border:0; border-bottom:1px solid #ebebeb; margin:40px auto; height:170px; font:18px 'Open Sans';}
+	.write_msg button{color:#fff; font:16px 'Open Sans';width: 200px; height: 50px; border-radius: 30px;}
+		.write_msg button img{filter:invert(100%);}
+		.write_msg button:hover img{filter:invert(0%);}
 
 #footer{margin-top:30px;}
 	#footer a{font:14px 'Open Sans'; text-decoration:none; color:#000;}
