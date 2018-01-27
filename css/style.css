@@ -123,6 +123,14 @@ sub{position:absolute; top:0; left:100%; margin: -5px -10px; min-width:16px; hei
 	.offer h2{font: 400 13px/18px 'Open Sans' !important;}
 	.offer button{height:35px; padding:0 20px; border:1px solid #e1e1e1; border-radius: 50px; margin:15px 10px 0 0;}
 
+#client{text-align:center;}
+	#client_info{margin-top:-60px;}
+		#client_info ul{padding:0 0 200px;}
+			#client_info ul li{list-style-type:none; display:inline-block; padding:0 40px; min-width: 20%;}
+	#client h2{font:22px 'Open Sans'; color:#00aeef; margin:40px auto 20px;}
+	#client h3{font:14px 'Open Sans';}
+	#client h4{font:14px 'Open Sans'; color:#7d7d7d;}
+
 #top{padding-top:185px;background: url(../img/car.jpg) center bottom no-repeat ,#f6f6f8;padding-bottom: 285px;}
 	#top h1{font:700 72px/70px 'Montserrat';}
 	#top h2{font:24px/34px 'Open Sans'; padding:13px 0;}
@@ -130,6 +138,24 @@ sub{position:absolute; top:0; left:100%; margin: -5px -10px; min-width:16px; hei
 		#top button img{left:25px; float:left;}
 		#top button h4{font: 12px 'Montserrat'; }
 	#top h5{font: 16px/34px 'Open Sans'; color:#7d7d7d; padding-bottom:15px;}
+
+#car{}
+	#car h1{font:bold 36px 'Open Sans'; color:#4f4f6f; padding:60px 0 0px;}
+	#car h3{font:300 22px 'Open Sans';}
+	#car h4{font:16px/24px 'Open Sans'; padding:25px 0 25px;}
+	#car h5{font:15px/25px 'Open Sans'; color:#7d7d7d; padding:10px 0 30px;}
+		#car ul{padding:0;}
+	#car img{max-width:100%;}
+
+#comments{}
+	#comments h2{font:300 24px 'Open Sans';}
+	.comment{}
+		.comment > img{width:75px; float:left;}
+		.comment > *:not(img){margin-left:140px;}
+		.comment h3{}
+		.comment h4{font:15px/25px 'Open Sans'; color:#636363; padding:15px 0 20px;}
+		.comment h5{}
+			.comment h5 span a{text-align:right;}
 
 #footer{margin-top:30px;}
 	#footer a{font:14px 'Open Sans'; text-decoration:none; color:#000;}
