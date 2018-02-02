@@ -1,0 +1,75 @@
+@supports (--css: variables) {
+	input[type="range"].multirange {
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	input[type="range"].multirange.original {
+		position: absolute;
+	}
+
+		input[type="range"].multirange.original::-webkit-slider-thumb {
+			position: relative;
+			z-index: 2;
+		}
+
+		input[type="range"].multirange.original::-moz-range-thumb {
+			transform: scale(1); /* FF doesn't apply position it seems */
+			z-index: 1;
+		}
+
+		input[type="range"].multirange::-moz-range-track {
+			border-color: transparent; /* needed to switch FF to "styleable" control */
+		}
+
+	input[type="range"].multirange.ghost {
+		position: relative;
+		background: var(--track-background);
+		--track-background: linear-gradient(to right,
+				transparent var(--low), var(--range-color) 0,
+				var(--range-color) var(--high), transparent 0
+			) no-repeat 0 45% / 100% 40%;
+		--range-color: hsl(190, 80%, 40%);
+	}
+
+		input[type="range"].multirange.ghost::-webkit-slider-runnable-track {
+			background: var(--track-background);
+		}
+
+		input[type="range"].multirange.ghost::-moz-range-track {
+			background: var(--track-background);
+		}
+
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 93% !important; padding:0 !important;
+  background: transparent;
+  height:5px !important; margin:10px 0 !important;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 0; height: 20px; width: 20px; border-radius: 50%; background: #00abe8; cursor: pointer;
+  margin-top: 0px; 
+}
+
+input[type=range]::-moz-range-thumb {
+  -moz-appearance: none;
+  border: 0; height: 20px; width: 20px; border-radius: 50%; background: #00abe8; cursor: pointer;
+  margin-top: 0px; 
+}
+
+input[type=range]::-ms-thumb {
+  border: 0; height: 20px; width: 20px; border-radius: 50%; background: #00abe8; cursor: pointer;
+  margin-top: 0px;
+}
