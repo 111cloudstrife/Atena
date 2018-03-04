@@ -24,7 +24,7 @@
 <div class="menu" style="background: transparent; top:-10px;">
 <div class="container">
 <div class="row">
-	<div class="col-md-2 col-sm-3 menu-logo col-xs-6">
+	<div class="col-md-2 col-sm-6 menu-logo col-xs-6 col-sm-offset-0 col-xs-offset-3">
 		<img src="img/logo.png" alt="">
 		<h3>ATENA</h3>
 		<h5>RENTCAR</h5>
@@ -36,16 +36,6 @@
 			<div class="notifications">
 				<h4>СООБЩЕНИЯ</h4>
 				<hr />
-				<div class="msg_notify">
-					<img src="img/someone.png" alt="" />
-					<h3><img src="img/new_msg.png" alt="" />Евгений Никитин<i>2 часа назад</i></h3>
-					<h5><img src="img/msg.png" alt="" />Депозит 10 000 рублей</h5>
-				</div>
-				<div class="msg_notify">
-					<img src="img/someone.png" alt="" />
-					<h3><img src="img/new_msg.png" alt="" />Евгений Никитин<i>2 часа назад</i></h3>
-					<h5><img src="img/msg.png" alt="" />Депозит 10 000 рублей</h5>
-				</div>
 				<div class="msg_notify">
 					<img src="img/someone.png" alt="" />
 					<h3><img src="img/new_msg.png" alt="" />Евгений Никитин<i>2 часа назад</i></h3>
@@ -92,11 +82,11 @@ $('.notifications').toggleClass('active');
 <section id="msg">
 <div class="container">
 <div class="row">
-	<div class="col-sm-5 npd">
+	<div class="col-sm-5 npd msglist">
 		<div class="msg_head">
 			<h4>Сообщения</h4>
 		</div>
-		<div style="margin-top:15px; max-height: 750px; overflow-y: auto;">
+		<div style="margin-top:15px; max-height: 350px; overflow-y: auto;">
 			<div class="msg_list active" data-msg-list="1" >
 				<img src="img/someone.png" alt="" />
 				<h3><img src="img/new_msg.png" alt="" />Евгений Никитин<i>2 часа назад</i></h3>
@@ -122,88 +112,28 @@ $('.notifications').toggleClass('active');
 				<h3><img src="img/new_msg.png" alt="" />Евгений Никитин<i>2 часа назад</i></h3>
 				<h5><img src="img/msg.png" alt="" />Депозит 10 000 рублей</h5>
 			</div>
-			<div class="msg_list" data-msg-list="6">
-				<img src="img/someone.png" alt="" />
-				<h3><img src="img/new_msg.png" alt="" />Евгений Никитин<i>2 часа назад</i></h3>
-				<h5><img src="img/msg.png" alt="" />Депозит 10 000 рублей</h5>
-			</div>
-			<div class="msg_list " data-msg-list="7" >
-				<img src="img/someone.png" alt="" />
-				<h3><img src="img/new_msg.png" alt="" />Евгений Никитин<i>2 часа назад</i></h3>
-				<h5><img src="img/msg.png" alt="" />Депозит 10 000 рублей</h5>
-			</div>
-			<div class="msg_list" data-msg-list="8">
-				<img src="img/someone.png" alt="" />
-				<h3><img src="img/new_msg.png" alt="" />Евгений Никитин<i>2 часа назад</i></h3>
-				<h5><img src="img/msg.png" alt="" />Депозит 10 000 рублей</h5>
-			</div>
-			<div class="msg_list " data-msg-list="9" >
-				<img src="img/someone.png" alt="" />
-				<h3><img src="img/new_msg.png" alt="" />Евгений Никитин<i>2 часа назад</i></h3>
-				<h5><img src="img/msg.png" alt="" />Депозит 10 000 рублей</h5>
-			</div>
-			<div class="msg_list" data-msg-list="10">
-				<img src="img/someone.png" alt="" />
-				<h3><img src="img/new_msg.png" alt="" />Евгений Никитин<i>2 часа назад</i></h3>
-				<h5><img src="img/msg.png" alt="" />Депозит 10 000 рублей</h5>
-			</div>
-			<div class="msg_list " data-msg-list="11" >
-				<img src="img/someone.png" alt="" />
-				<h3><img src="img/new_msg.png" alt="" />Евгений Никитин<i>2 часа назад</i></h3>
-				<h5><img src="img/msg.png" alt="" />Депозит 10 000 рублей</h5>
-			</div>
-			<div class="msg_list" data-msg-list="12">
-				<img src="img/someone.png" alt="" />
-				<h3><img src="img/new_msg.png" alt="" />Евгений Никитин<i>2 часа назад</i></h3>
-				<h5><img src="img/msg.png" alt="" />Депозит 10 000 рублей</h5>
-			</div>
-			<div class="msg_list " data-msg-list="13" >
-				<img src="img/someone.png" alt="" />
-				<h3><img src="img/new_msg.png" alt="" />Евгений Никитин<i>2 часа назад</i></h3>
-				<h5><img src="img/msg.png" alt="" />Депозит 10 000 рублей</h5>
-			</div>
-			<div class="msg_list" data-msg-list="14">
-				<img src="img/someone.png" alt="" />
-				<h3><img src="img/new_msg.png" alt="" />Евгений Никитин<i>2 часа назад</i></h3>
-				<h5><img src="img/msg.png" alt="" />Депозит 10 000 рублей</h5>
-			</div>
 		</div>
 	</div>
-	<div class="col-sm-7 ">
+	<div class="col-sm-7 msgfull">
+		<img src="img/button_msg.png" alt="" class="msg_trigger" />
+		<script>
+			$('.msg_trigger').click(function(){
+				$('.msglist').toggleClass('active');
+			})
+		</script>
 		<div data-msg="1" class="active">
 			<div class="msg_head">
 				<img src="img/someone.png" alt="" />
-				<div class="col-sm-5 npd">
+				<div class="col-lg-10 col-md-8 npd">
+					<button class="white"><a href="#">Отказ</a></button>
+				<button class="white"><a href="#">Мы договорились</a></button>
 				<h3>Евгений Никитин</h3>
 				<h5>Компания: Rent Phuket Car</h5>
-				</div>
-				<div class="col-sm-5 npd">
-				<div style="height:50px;"></div>
-				<button class="white"><a href="#">Мы договорились</a></button>
-				<button class="white"><a href="#">Отказ</a></button>
+				
 				</div>
 			</div>
 			<div style="clear:both;"></div>
 			<div class="msg_history" style="margin-top:15px;">
-				<div class="msgs from_me">
-					<img src="img/someone.png" alt="" />
-					<div>Добрый день!</div>
-				</div>
-				<div class="msgs to_me">
-					<img src="img/someone.png" alt="" />
-					<div>Здраствуйте!</div>
-					<div>Есть машина под ваши параметры</div>
-				</div>
-				<div class="msgs from_me">
-					<img src="img/someone.png" alt="" />
-					<div>Супер! Есть фото?</div>
-					<div>Какие условия аренды?</div>
-				</div>
-				<div class="msgs to_me">
-					<img src="img/someone.png" alt="" />
-					<div>Здраствуйте!</div>
-					<div>Есть машина под ваши параметры</div>
-				</div>
 				<div class="msgs from_me">
 					<img src="img/someone.png" alt="" />
 					<div>Супер! Есть фото?</div>
@@ -243,39 +173,17 @@ $('.notifications').toggleClass('active');
 		<div data-msg="2">
 			<div class="msg_head">
 				<img src="img/someone.png" alt="" />
-				<div class="col-sm-5 npd">
+				<div class="col-lg-10 col-md-8 npd">
+					<button class="white"><a href="#">Отказ</a></button>
+				<button class="white"><a href="#">Мы договорились</a></button>
 				<h3>Евгений Никитин</h3>
 				<h5>Компания: Rent Phuket Car</h5>
-				</div>
-				<div class="col-sm-5 npd">
-				<div style="height:50px;"></div>
-				<button class="white"><a href="#">Мы договорились</a></button>
-				<button class="white"><a href="#">Отказ</a></button>
+				
 				</div>
 			</div>
 			<div style="clear:both;"></div>
 			<div class="msg_history" style="margin-top:15px;">
-				<div class="msgs from_me">
-					<img src="img/someone.png" alt="" />
-					<div>Добрый день!</div>
-				</div>
-				<div class="msgs to_me">
-					<img src="img/someone.png" alt="" />
-					<div>Здраствуйте!</div>
-					<div>Есть машина под ваши параметры</div>
-				</div>
-				<div class="msgs from_me">
-					<img src="img/someone.png" alt="" />
-					<div>Супер! Есть фото?</div>
-					<div>Какие условия аренды?</div>
-				</div>
 				
-				<div class="accept_block text-center">
-					<h4>Пользователь утверждает, что вы договорились</h4>
-					<button class="white"><a href="#">Мы договорились</a></button>
-					<button class="white"><a href="#">Продолжить диалог</a></button>
-					<h4>Поздравляю! Скоро у вас появится рейтинг!</h4>
-				</div>
 				
 			</div>
 		</div>
