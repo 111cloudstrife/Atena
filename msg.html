@@ -79,7 +79,7 @@ $('.notifications').toggleClass('active');
 }
 </script>
 
-<section id="msg">
+<section id="msg" tabindex='1'>
 <div class="container">
 <div class="row">
 	<div class="col-sm-5 npd msglist">
@@ -288,6 +288,9 @@ var list_id = $(this).attr('data-msg-list');
 $('[data-msg-list],[data-msg]').removeClass('active');
 $('[data-msg-list='+list_id+'],[data-msg='+list_id+']').addClass('active');
 });
+
+$('.msg_history').scrollTop($('.msg_history')[0].scrollHeight);
+document.getElementById('msg').focus();
 </script>
 
 </body>

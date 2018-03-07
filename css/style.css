@@ -110,9 +110,14 @@ sub{position:absolute; top:0; left:100%; margin: -5px -10px; min-width:16px; hei
 	.msgfull{width:100% !important;}
 }
 @media (max-width: 640px){
-	.msg_head {height: 130px;}
-	.msg_head h3{clear: both; padding: 0;}
-	.msg_head > img{padding: 25px 20px 0;}
+	.msg_head {height: 120px;}
+	.msg_head h3{position: absolute; right: 0; top: 10px;padding: 0;}
+	.msg_head h5{position: absolute; right: 0; top: 40px;}
+	.msg_trigger{width: 60px; top: 5px; left: 20px; z-index: 2; position: absolute;}
+	.msg_head > img{display: none;}
+
+	.msg_head .npd button{position:absolute; margin: 65px 5px;}
+	.msg_head .npd button:nth-of-type(2) {position: absolute; margin: 65px 0 0 100px;}
 }
 
 	[data-msg]{display:none;}
@@ -279,18 +284,30 @@ sub{position:absolute; top:0; left:100%; margin: -5px -10px; min-width:16px; hei
 	.social{margin:15px auto;}
 	.menu+*, #top{padding:100px 0 0 !important;}
 }
-@media(max-width: 700px){
+@media(max-width: 768px){
 	.menu+*, #top{padding:140px 0 0 !important;}
 	.msglist .msg_head{height:80px;}
 	.msglist.active{left: 20%;}
-	.menu_line ul li {margin: 0 10px; font: 10px/50px 'Open Sans';
+	.menu_line ul li {margin: 0 5px; font: 10px/20px 'Open Sans';}
+	.menu_line ul {margin: 0px 15px;}
+	.msg_list h3 i {display: block; padding: 10px 50px 0; color: #ccc; font: italic 13px 'Open Sans';}
+}
+@media(max-width: 640px){
+	.msg_list > img {float: none; padding: 0; display: block; margin: 0 auto;}
+	.msg_list h3 {text-align: center;}
+	.msg_list h3 i {float: none;}
+	.msg_list h5 {text-align: center;}
 }
 
 @media(max-width:360px){
-	.menu+*, #top{padding:180px 0 0 !important;}
+	.menu+*, #top{padding:140px 0 0 !important;}
 	.menu-logo img, .menu-rent img{padding-left:5%; padding-right:5px;}
 }
-
+@media(min-width:1024px){
+	.msgfull{padding: 0; border-left: 1px solid #eee;}
+	.msg_history{padding:0 15px;}
+	.msg_head + div {margin: 0 15px;}
+}
 
 
 
