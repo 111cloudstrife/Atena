@@ -307,6 +307,9 @@ sub{position:absolute; top:0; left:100%; margin: -5px -10px; min-width:16px; hei
 	.msgfull{padding: 0; border-left: 1px solid #eee;}
 	.msg_history{padding:0 15px;}
 	.msg_head + div {margin: 0 15px;}
+
+
+
 }
 
 
