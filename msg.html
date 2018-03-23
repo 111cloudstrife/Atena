@@ -86,7 +86,7 @@ $('.notifications').toggleClass('active');
 		<div class="msg_head">
 			<h4>Сообщения</h4>
 		</div>
-		<div style="margin-top:15px; max-height: 460px; overflow-y: auto;">
+		<div style="margin-top:15px;">
 			<div class="msg_list active" data-msg-list="1" >
 				<img src="img/someone.png" alt="" />
 				<h3><img src="img/new_msg.png" alt="" />Евгений Никитин<i>2 часа назад</i></h3>
@@ -126,18 +126,18 @@ $('.notifications').toggleClass('active');
 				$('.msglist').toggleClass('active');
 			})
 		</script>
-		<div data-msg="1" class="active">
-			<div class="msg_head">
-				<img src="img/someone.png" alt="" />
-				<div class="col-lg-10 col-md-8 npd">
-					<button class="white"><a href="#">Отказ</a></button>
+		<div class="msg_head">
+			<img src="img/someone.png" alt="" />
+			<div class="col-lg-10 col-md-8 npd">
+				<button class="white"><a href="#">Отказ</a></button>
 				<button class="white"><a href="#">Мы договорились</a></button>
-				<h3>Евгений Никитин</h3>
-				<h5>Компания: Rent Phuket Car</h5>
-				
-				</div>
+			<h3>Евгений Никитин</h3>
+			<h5>Компания: Rent Phuket Car</h5>
+			
 			</div>
-			<div style="clear:both;"></div>
+		</div>
+		<div style="clear:both;"></div>
+		<div data-msg="1" class="active">
 			<div class="msg_history" style="margin-top:15px;">
 				<div class="msgs from_me">
 					<img src="img/someone.png" alt="" />
@@ -171,27 +171,47 @@ $('.notifications').toggleClass('active');
 					<button class="white"><a href="#">Продолжить диалог</a></button>
 					<h4>Поздравляю! Скоро у вас появится рейтинг!</h4>
 				</div>
-				
 			</div>
 		</div>
 		
-		<div data-msg="2">
-			<div class="msg_head">
-				<img src="img/someone.png" alt="" />
-				<div class="col-lg-10 col-md-8 npd">
-					<button class="white"><a href="#">Отказ</a></button>
-				<button class="white"><a href="#">Мы договорились</a></button>
-				<h3>Евгений Никитин</h3>
-				<h5>Компания: Rent Phuket Car</h5>
+		<div data-msg="2" class="">
+			<div class="msg_history" style="margin-top:15px;">
+				<div class="msgs from_me">
+					<img src="img/someone.png" alt="" />
+					<div>Супер! Есть фото?</div>
+					<div>Какие условия аренды?</div>
+				</div>
+				<div class="msgs to_me">
+					<img src="img/someone.png" alt="" />
+					<div>Здраствуйте!</div>
+					<div>Есть машина под ваши параметры</div>
+				</div>
+				<div class="msgs from_me">
+					<img src="img/someone.png" alt="" />
+					<div>Супер! Есть фото?</div>
+					<div>Какие условия аренды?</div>
+				</div>
+				<div class="msgs to_me">
+					<img src="img/someone.png" alt="" />
+					<div>Здраствуйте!</div>
+					<div>Есть машина под ваши параметры</div>
+				</div>
+				<div class="msgs from_me">
+					<img src="img/someone.png" alt="" />
+					<div>Супер! Есть фото?</div>
+					<div>Какие условия аренды?</div>
+				</div>
 				
+				<div class="accept_block text-center">
+					<h4>Пользователь утверждает, что вы договорились</h4>
+					<button class="white"><a href="#">Мы договорились</a></button>
+					<button class="white"><a href="#">Продолжить диалог</a></button>
+					<h4>Поздравляю! Скоро у вас появится рейтинг!</h4>
 				</div>
 			</div>
-			<div style="clear:both;"></div>
-			<div class="msg_history" style="margin-top:15px;">
-				
-				
-			</div>
 		</div>
+		
+		
 		
 		
 		<input type="text" class="input_msg" placeholder="Напишите сообщение...">
@@ -297,6 +317,22 @@ $('[data-msg-list='+list_id+'],[data-msg='+list_id+']').addClass('active');
 $('.msg_history').scrollTop($('.msg_history')[0].scrollHeight);
 document.getElementById('msg').focus();
 </script>
+<style>
+@media(min-width:1100px){
+	.msglist{    position: fixed;
+	right:58%;
+    max-height: 65%;
+	padding:100px 0 0 !important;
+    overflow-y: auto; max-width:500px;}
+	.msgfull{    position: fixed;
+    left:42%;
+	padding:100px 0 0 !important;
+    max-height: 65%;
+    overflow-y: auto; max-width:780px;}
+	.msg_head{position:fixed; width:760px;top: 130px; background:#fff; z-index:2;}
+	#footer{position:fixed; padding-top:10px; bottom:-25px; left:0; right:0; background:#fff;}
+}
+</style>
 
 </body>
 </html>

@@ -90,7 +90,7 @@ sub{position:absolute; top:0; left:100%; margin: -5px -10px; min-width:16px; hei
 		.msgs.from_me > div:first-of-type{border-top-right-radius:50px;}
 		.msgs.from_me > div:last-of-type{border-bottom-right-radius:50px;}
 		.msgs.from_me > img{right:0;}
-	.msg_history{height:350px; overflow-y:auto; bottom:0; position:relative;}
+	.msg_history{bottom:0; position:relative;}
 	.input_msg{min-width:70%;padding:10px 10px; margin:10px 10px; border:0;}
 	.send_msg{background:#fff; border-radius:30px; padding:10px 25px; float:right; margin:10px 10px; border:0; box-shadow: 0 10px 25px #ddd;}
 	#msg > div > div > div > button{background:transparent; margin:10px 0 10px 20px;}
@@ -101,6 +101,8 @@ sub{position:absolute; top:0; left:100%; margin: -5px -10px; min-width:16px; hei
     left: 0px;
 	z-index: 2;}
 
+
+	
 @media (min-width: 1100px){
 	.msg_trigger{display: none;}
 }
