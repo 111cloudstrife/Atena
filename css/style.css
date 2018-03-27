@@ -212,7 +212,8 @@ sub{position:absolute; top:0; left:100%; margin: -5px -10px; min-width:16px; hei
 #comments{padding-bottom: 60px;}
 	#comments h2{font:300 24px 'Open Sans';}
 	.comment{padding: 30px 0 0;}
-		.comment > img{width:75px; float:left;}
+	.comment_pl{float:left; width:75px; height:75px; display:inline-block; margin:0 !important;}
+		.comment > img{max-width:100%; max-height:100%; float:left;}
 		.comment > *:not(img){margin-left:140px;}
 		.comment h3{font: 600 17px 'Open Sans';}
 		.comment h4{font:15px/25px 'Open Sans'; color:#636363; padding:15px 0 20px;}
