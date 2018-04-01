@@ -37,27 +37,27 @@
 				<h4>СООБЩЕНИЯ</h4>
 				<hr />
 				<div class="msg_notify">
-					<img src="img/someone.png" alt="" />
+					<div class="ava_placeholder"><img src="img/someone.png" alt="" /></div>
 					<h3><img src="img/new_msg.png" alt="" />Евгений Никитин<i>2 часа назад</i></h3>
 					<h5><img src="img/msg.png" alt="" />Депозит 10 000 рублей</h5>
 				</div>
 				<div class="msg_notify">
-					<img src="img/someone.png" alt="" />
+					<div class="ava_placeholder"><img src="img/someone.png" alt="" /></div>
 					<h3><img src="img/new_msg.png" alt="" />Евгений Никитин<i>2 часа назад</i></h3>
 					<h5><img src="img/msg.png" alt="" />Депозит 10 000 рублей</h5>
 				</div>
 				<div class="msg_notify">
-					<img src="img/someone.png" alt="" />
+					<div class="ava_placeholder"><img src="img/someone.png" alt="" /></div>
 					<h3><img src="img/new_msg.png" alt="" />Евгений Никитин<i>2 часа назад</i></h3>
 					<h5><img src="img/msg.png" alt="" />Депозит 10 000 рублей</h5>
 				</div>
 				<div class="msg_notify">
-					<img src="img/someone.png" alt="" />
+					<div class="ava_placeholder"><img src="img/someone.png" alt="" /></div>
 					<h3><img src="img/new_msg.png" alt="" />Евгений Никитин<i>2 часа назад</i></h3>
 					<h5><img src="img/msg.png" alt="" />Депозит 10 000 рублей</h5>
 				</div>
 				<div class="msg_notify">
-					<img src="img/someone.png" alt="" />
+					<div class="ava_placeholder"><img src="img/someone.png" alt="" /></div>
 					<h3><img src="img/new_msg.png" alt="" />Евгений Никитин<i>2 часа назад</i></h3>
 					<h5><img src="img/msg.png" alt="" />Депозит 10 000 рублей</h5>
 				</div>
@@ -83,13 +83,6 @@
 </div>
 </div>
 </div>
-<script>
-function bells(){
-$('.notifications').toggleClass('active');
-}
-</script>
-
-
 
 <section id="my_dv">
 <div class="container">
@@ -97,7 +90,7 @@ $('.notifications').toggleClass('active');
 	<h2>Новые заказы</h2>
 	<h3>Обрабатывайте быстро новые заказы</h3>
 	<div class="dv offer col-md-4 col-sm-6">
-		<img src="img/ava2.png" alt="">
+		<div class="offers_placeholder"><img src="img/ava2.png" alt=""></div>
 		<h1>Света</h1>
 		<h3>Пхукет</h3>
 		<h2>
@@ -110,7 +103,7 @@ $('.notifications').toggleClass('active');
 		<button class="white">Отклонить</button>
 	</div>
 	<div class="dv offer col-md-4 col-sm-6">
-		<img src="img/ava2.png" alt="">
+		<div class="offers_placeholder"><img src="img/ava2.png" alt=""></div>
 		<h1>Света</h1>
 		<h3>Пхукет</h3>
 		<h2>
@@ -123,7 +116,7 @@ $('.notifications').toggleClass('active');
 		<button class="white">Отклонить</button>
 	</div>
 	<div class="dv offer col-md-4 col-sm-6">
-		<img src="img/ava2.png" alt="">
+		<div class="offers_placeholder"><img src="img/ava2.png" alt=""></div>
 		<h1>Света</h1>
 		<h3>Пхукет</h3>
 		<h2>
@@ -136,7 +129,7 @@ $('.notifications').toggleClass('active');
 		<button class="white">Отклонить</button>
 	</div>
 	<div class="dv offer col-md-4 col-sm-6">
-		<img src="img/ava2.png" alt="">
+		<div class="offers_placeholder"><img src="img/ava2.png" alt=""></div>
 		<h1>Света</h1>
 		<h3>Пхукет</h3>
 		<h2>
@@ -149,7 +142,7 @@ $('.notifications').toggleClass('active');
 		<button class="white">Отклонить</button>
 	</div>
 	<div class="dv offer col-md-4 col-sm-6">
-		<img src="img/ava2.png" alt="">
+		<div class="offers_placeholder"><img src="img/ava2.png" alt=""></div>
 		<h1>Света</h1>
 		<h3>Пхукет</h3>
 		<h2>
@@ -231,18 +224,7 @@ $('.notifications').toggleClass('active');
 	<button class="blue"><a href="javascript:modal_drop();">Отправить</a></button>
 </div>
 
-<script>
-function modal_call(type){
-var height = $('.'+type).height();
-$('.'+type).attr('style', 'margin-top:-'+height/2+'px');
-$('.overlay, .'+type).addClass('active');
-}
-function modal_drop(){
-$('.modalx').attr('style', 'margin-top:-1000px');
-$('.overlay, .modalx').removeClass('active');
-}
-$('.overlay').click(function(){modal_drop();});
-</script>
+<script src="js/scripts.js"></script>
 
 </body>
 </html>

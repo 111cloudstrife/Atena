@@ -52,7 +52,7 @@ sub{position:absolute; top:0; left:100%; margin: -5px -10px; min-width:16px; hei
 	#my_dv h2{margin:30px 0; font:36px 'Open Sans'; color:#4f4f6f;}
 	#my_dv h3{font:300 22px 'Open Sans';}
 	.dv{margin: 40px 0px;}
-		.dv > img{float:left; margin:0 30px 35px 0;}
+		.offers_placeholder{float:left; margin:0 30px 35px 0; width:70px; height:70px;}
 		.dv h1{font: 600 15px 'Open Sans'; color:#00aeef;}
 		.dv h2{font: 600 14px/28px 'Open Sans' !important; margin:10px 0 !important;}
 			.dv h2 a{float:right; display:block; margin:-10px 100px 0 0;}
@@ -65,8 +65,8 @@ sub{position:absolute; top:0; left:100%; margin: -5px -10px; min-width:16px; hei
 	#my_dv button{border:1px solid #e1e1e1;  padding:0px 15px; width:200px; border-radius: 50px; height:50px; margin:10px 5px; font-size:16px;}
 
 .msg_head{height:100px; border-bottom:1px solid #ebebeb;}
-	.msg_head img{padding:0 5px;}
-	.msg_head > img{float:left; padding: 25px 20px; border-radius: 50%;}
+	
+	.msg_head > .ava_placeholder{float:left; margin: 25px 20px; border-radius: 50%; width:60px; height:60px;}
 	.msg_head h3{font:600 18px 'Open Sans';    padding: 30px 0 5px;}
 	.msg_head h4{font:300 22px 'Open Sans'; padding: 35px 0 0;}
 	.msg_head h5{font:14px 'Open Sans';}
@@ -76,22 +76,23 @@ sub{position:absolute; top:0; left:100%; margin: -5px -10px; min-width:16px; hei
 	.accept_block h4{font-size:22px;}
 .msg_list{padding:22px 20px; margin:0 10px;}
 	.msg_list img{padding:0 10px 0 0; width:22px;}
-	.msg_list > img{float:left; padding:0 10px 0 0; width:auto; border-radius: 50%;}
+	.msg_list .ava_placeholder{float:left; margin:0 10px 0 0; width:50px; height:50px; border-radius: 50%;}
+	.msg_list .ava_placeholder img{padding:0 !important;}
 	.msg_list h3{font:600 14px 'Open Sans'; padding:5px 0;}
 		.msg_list h3 i{float:right; padding:0 50px; color:#ccc; font:italic 13px 'Open Sans';}
 	.msg_list h5{font:13px 'Open Sans'; color:#7d7d7d;}
 .msgs{}
-	.msgs > img{width:50px; position:absolute;     border-radius: 50%;}
+	.msgs > .ava_placeholder{width:50px; height:50px; position:absolute;     border-radius: 50%;}
 	.msgs > div:after{content:' '; display:block; clear:both;width:100%; height:1px;}
-	.msgs.to_me > div{background:#ebebeb; padding:10px 20px; margin:2.5px 60px; display:table;    border-top-right-radius: 50px; border-bottom-right-radius: 50px;}
-		.msgs.to_me > div:first-of-type{border-top-left-radius:50px;}
-		.msgs.to_me > div:last-of-type{border-bottom-left-radius:50px;}
-	.msgs.from_me > div{background:#00aeef; color:#fff; padding:10px 20px; margin:2.5px 60px 2.5px auto; display:table;    border-top-left-radius: 50px; border-bottom-left-radius: 50px;}
-		.msgs.from_me > div:first-of-type{border-top-right-radius:50px;}
-		.msgs.from_me > div:last-of-type{border-bottom-right-radius:50px;}
-		.msgs.from_me > img{right:0;}
+	.msgs.to_me div > div{background:#ebebeb; padding:10px 20px; margin:2.5px 60px; display:table;    border-top-right-radius: 50px; border-bottom-right-radius: 50px;}
+		.msgs.to_me div > div:first-of-type{border-top-left-radius:50px;}
+		.msgs.to_me div > div:last-of-type{border-bottom-left-radius:50px;}
+	.msgs.from_me div > div{background:#00aeef; color:#fff; padding:10px 20px; margin:2.5px 60px 2.5px auto; display:table;    border-top-left-radius: 50px; border-bottom-left-radius: 50px;}
+		.msgs.from_me div > div:first-of-type{border-top-right-radius:50px;}
+		.msgs.from_me div > div:last-of-type{border-bottom-right-radius:50px;}
+		.msgs.from_me > .ava_placeholder{right:0;}
 	.msg_history{bottom:0; position:relative;}
-	.input_msg{min-width:70%;padding:10px 10px; margin:10px 10px; border:0;}
+	.input_msg{min-width:70%;padding:10px 10px; margin:10px 0px; border:0;}
 	.send_msg{background:#fff; border-radius:30px; padding:10px 25px; float:right; margin:10px 10px; border:0; box-shadow: 0 10px 25px #ddd;}
 	#msg > div > div > div > button{background:transparent; margin:10px 0 10px 20px;}
 	#msg input{cursor:unset;}
@@ -146,7 +147,7 @@ sub{position:absolute; top:0; left:100%; margin: -5px -10px; min-width:16px; hei
 	#auth input[type=submit]{width:100%;}
 
 .offer{padding:0 !important; margin-bottom:80px;}
-	.offer img{margin-bottom:75px;}
+	.offer .offers_placeholder{margin-bottom:75px;}
 	.offer h2{font: 400 13px/18px 'Open Sans' !important;}
 	.offer button{height:35px; padding:0 20px; border:1px solid #e1e1e1; border-radius: 50px; margin:15px 10px 0 0;}
 
@@ -165,7 +166,7 @@ sub{position:absolute; top:0; left:100%; margin: -5px -10px; min-width:16px; hei
 	.item span{font:400 13px 'Open Sans'; color:#959595;}
 	.item .author h3{font:600 14px 'Open Sans';}
 	.item .author h4{font:400 11px 'Open Sans';}
-	.item .author img{float: left; padding: 0 10px; width: 65px; border-radius: 50%;}
+	.item .author .author_placeholder{float: left; margin: 0 10px; width: 40px; height:40px; border-radius: 50%;}
 	.item span img{margin:20px 5px;}
 	.item .col-sm-5{padding:0 !important;}
 	.item .col-sm-6{padding:0 35px !important;}
@@ -178,6 +179,8 @@ sub{position:absolute; top:0; left:100%; margin: -5px -10px; min-width:16px; hei
 
 #client{text-align:center;}
 	#client_info{margin-top:-60px;}
+	.profile_placeholder{width: 170px; height:170px; margin:0 auto; border-radius:50%; overflow:hidden;border:5px solid #fff;}
+		.profile_placeholder img{}
 		#client_info ul{padding:0 0 200px;}
 			#client_info ul li{list-style-type:none; display:inline-block; padding:0 40px; min-width: 20%;}
 	#client h2{font:22px 'Open Sans'; color:#00aeef; margin:40px auto 20px;}
@@ -200,8 +203,9 @@ sub{position:absolute; top:0; left:100%; margin: -5px -10px; min-width:16px; hei
 	#car h4{font:16px/24px 'Open Sans'; padding:15px 0 25px;}
 	#car h5{font: 15px/30px 'Open Sans'; color: #7d7d7d; padding: 15px 0 30px;}
 		#car ul{padding:0;}
-	#car img{max-width:100%;}
-	.car_owner > img{float:left; padding:15px 20px 15px 5px;}
+	.car_main img{max-width:100%;}
+	.car_owner .ava_placeholder{float:left; margin:15px 20px 15px 5px;  width:70px; height:70px; }
+	.ava_placeholder{box-sizing: content-box; border-radius:50%; overflow:hidden;}
 	.car_owner h5{font:13px/25px 'Open Sans' !important; padding:10px 0 30px !important;}
 	.car_owner h5 img{padding-left: 5px; padding-right: 10px;}
 	.car_owner h4{font:14px/24px 'Open Sans' !important; padding: 15px 0 !important;}
@@ -247,8 +251,9 @@ sub{position:absolute; top:0; left:100%; margin: -5px -10px; min-width:16px; hei
 	.notifications h4{font:14px 'Open Sans'; padding:15px 25px; color:#000;}
 	.notifications hr{margin:0 auto;}
 .msg_notify{padding:20px 20px; margin:0 10px;}
-	.msg_notify img{padding:0 10px 0 0; width:10px; margin: 5px 10px 0 !important;}
-	.msg_notify > img{float:left; padding:0 10px 0 0; width:50px; margin:5px 0 0 !important;}
+	.msg_notify h3 img, .msg_notify h5 img{padding:0 10px 0 0; width:10px; margin: 5px 10px 0 !important;}
+	.msg_notify > .ava_placeholder{float:left; margin:10px 0px; width:50px;}
+		.msg_notify .ava_placeholder img{margin:0 !important;}
 	.msg_notify h3{font:600 14px 'Open Sans'; padding:5px 0; color:#1eacea;letter-spacing:0;}
 		.msg_notify h3 i{float:right; padding:0 50px; color:#ccc; font:italic 13px 'Open Sans';position: absolute; left: 30px; top: 50px;}
 	.msg_notify h5{font:13px 'Open Sans'; color:#7d7d7d; letter-spacing:0; padding:0 0 10px;}
